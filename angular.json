@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ventas-2023.1": {
+    "frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ventas-2023.1",
+            "outputPath": "dist/frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -29,7 +29,8 @@
               "node_modules/materialize-css/dist/css/materialize.css"
             ],
             "scripts": [
-              "node_modules/materialize-css/dist/js/materialize.js"
+              "node_modules/materialize-css/dist/js/materialize.js",
+              "src/assets/js/funcionesM.js"
             ]
           },
           "configurations": {
@@ -63,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ventas-2023.1:build:production"
+              "browserTarget": "frontend:build:production"
             },
             "development": {
-              "browserTarget": "ventas-2023.1:build:development"
+              "browserTarget": "frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ventas-2023.1:build"
+            "browserTarget": "frontend:build"
           }
         },
         "test": {
